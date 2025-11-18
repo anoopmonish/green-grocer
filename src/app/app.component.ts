@@ -1,14 +1,15 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { invoke } from '@tauri-apps/api/core';
+import { AppCommonModule } from './app-common.module';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [AppCommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+  companyName = 'SV MART';
   greetingMessage = '';
 
   greet(event: SubmitEvent, name: string): void {

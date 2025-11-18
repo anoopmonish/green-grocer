@@ -3,3 +3,10 @@ import { AppComponent } from './app/app.component';
 import { appConfig } from './app/app.config';
 
 bootstrapApplication(AppComponent, appConfig).catch(err => console.error(err));
+
+/*
+import { platformBrowser } from '@angular/platform-browser';
+import { AppModule } from './app/app.module';
+
+platformBrowser().bootstrapModule(AppModule);
+*/
