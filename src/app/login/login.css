@@ -1,0 +1,21 @@
+@keyframes rotate360 {
+  0% {
+    transform: none;
+  }
+  25% {
+    transform: rotateX(180deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.spinner {
+  animation: rotate360 4s ease-in-out infinite;
+}

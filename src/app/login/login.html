@@ -1,1 +1,6 @@
-<p>login works!</p>
+<mat-card>
+  <input placeholder="User ID" [(ngModel)]="userId" />
+  <input placeholder="Password" [(ngModel)]="password" />
+  <mat-button (click)="login()">Login</mat-button>
+</mat-card>
+<img class="spinner" width="150" height="150" src="assets/logo-transparent.png" />

@@ -1,9 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { AppCommonModule } from '../app-common.module';
+import { LoginService } from './login.service';
 
 @Component({
   selector: 'app-login',
-  imports: [],
+  imports: [AppCommonModule],
   templateUrl: './login.html',
-  styleUrl: './login.css'
+  styleUrl: './login.css',
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class Login {}
+export class Login {
+  userId: string;
+  password: string;
+
+  constructor(private loginSvc: LoginService) {}
+
+  login() {
+    this.loginSvc.initiateLogin(this.userId, this.password);
+  }
+}
