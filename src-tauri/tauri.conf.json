@@ -12,9 +12,9 @@
   "app": {
     "windows": [
       {
-        "title": "green-grocer",
-        "width": 800,
-        "height": 600
+        "title": "Green Grocer",
+        "width": 1200,
+        "height": 800
       }
     ],
     "security": {

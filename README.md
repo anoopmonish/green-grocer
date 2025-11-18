@@ -9,12 +9,19 @@ This template should help get you started developing with Tauri and Angular.
 [rust-analyzer] (https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer)  
 [Angular Language Service] (https://marketplace.visualstudio.com/items?itemName=Angular.ng-template)
 
-To run the app:  
+# To change icon:  
+npm run tauri icon ./original-icon-transparent.png  
+All icons will be generated at ./src-tauri/icons  
+rmdir /s /q "./src-tauri/icons/android"  
+rmdir /s /q "./src-tauri/icons/ios"  
+
+
+# To run the app:  
 cd green-grocer  
 npm install  
 npm run tauri dev
 
 
-Before commit:
+# Before commit:
 npm run lint  
 npm run format  
