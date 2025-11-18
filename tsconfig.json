@@ -16,6 +16,14 @@
     "target": "ES2022",
     "module": "preserve"
   },
+  "lint": {
+    "builder": "@angular-eslint/builder:lint",
+    "options": {
+      "eslintConfig": ".eslint.config.json",
+      "tsConfig": ["tsconfig.app.json", "tsconfig.spec.json"],
+      "exclude": ["**/node_modules/**"]
+    }
+  },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,

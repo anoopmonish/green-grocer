@@ -10,4 +10,11 @@ This template should help get you started developing with Tauri and Angular.
 [Angular Language Service] (https://marketplace.visualstudio.com/items?itemName=Angular.ng-template)
 
 To run the app:  
+cd green-grocer  
+npm install  
 npm run tauri dev
+
+
+Before commit:
+npm run lint  
+npm run format  
