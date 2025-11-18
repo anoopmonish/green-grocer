@@ -10,8 +10,8 @@ This template should help get you started developing with Tauri and Angular.
 [Angular Language Service] (https://marketplace.visualstudio.com/items?itemName=Angular.ng-template)
 
 # To change icon:  
-npm run tauri icon ./original-icon-transparent.png  
-All icons will be generated at ./src-tauri/icons  
+npm run tauri icon ./src/assets/original-icon-transparent.png  
+All icon variations will be generated at ./src-tauri/icons  
 rmdir /s /q "./src-tauri/icons/android"  
 rmdir /s /q "./src-tauri/icons/ios"  
 
