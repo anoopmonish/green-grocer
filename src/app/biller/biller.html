@@ -1,0 +1,88 @@
+<mat-toolbar>
+  <span>Invoice Generator</span>
+  <span class="spacer"></span>
+  <button matIconButton matTooltip="Print" matTooltipPosition="before">
+    <mat-icon>print</mat-icon>
+  </button>
+</mat-toolbar>
+
+<div class="row m-2">
+  <div class="col-2">
+    <mat-form-field appearance="outline">
+      <mat-label>Bill No</mat-label>
+      <input matInput type="text" [(ngModel)]="bill.billNumber" readonly />
+      <mat-icon matSuffix>receipt_long</mat-icon>
+    </mat-form-field>
+  </div>
+  <div class="col-2">
+    <mat-form-field appearance="outline">
+      <mat-label>Date</mat-label>
+      <input matInput [(ngModel)]="bill.billDate" readonly />
+      <mat-icon matSuffix>calendar_month</mat-icon>
+    </mat-form-field>
+  </div>
+  <div class="col-2">
+    <mat-form-field appearance="outline">
+      <mat-label>Customer Name</mat-label>
+      <input matInput type="text" [(ngModel)]="bill.customerName" />
+      <mat-icon matSuffix>person_heart</mat-icon>
+    </mat-form-field>
+  </div>
+  <div class="col-2">
+    <mat-form-field appearance="outline">
+      <mat-label>Phone</mat-label>
+      <input
+        matInput
+        type="text"
+        pattern="[0-9]+"
+        min="0"
+        max="45"
+        [(ngModel)]="bill.customerPhone"
+      />
+      <mat-icon matSuffix>phone</mat-icon>
+    </mat-form-field>
+  </div>
+  <div class="col-4">
+    <mat-form-field appearance="outline">
+      <mat-label>Address</mat-label>
+      <input matInput type="text" [(ngModel)]="bill.customerAddress" />
+      <mat-icon matSuffix>add_home_work</mat-icon>
+    </mat-form-field>
+  </div>
+</div>
+
+<div class="table-scrollable-container">
+  <table class="table table-striped table-sm table-bordered table-hover">
+    <thead>
+      <tr>
+        <th class="bg-success">No.</th>
+        <th class="bg-success">Code</th>
+        <th class="bg-success">Name</th>
+        <th class="bg-success">Quantity</th>
+        <th class="bg-success">Price</th>
+        <th class="bg-success">MRP</th>
+        <th class="bg-success">Tax</th>
+        <th class="bg-success">Amount</th>
+        <th class="bg-success"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      @for (item of bill.items; track $index; let idx = $index) {
+      <tr>
+        <th>{{idx}}</th>
+        <td><input [(ngModel)]="item.code" /></td>
+        <td>{{item.name}}</td>
+        <td><input type="number" [(ngModel)]="item.quantity" /></td>
+        <td><input type="number" [(ngModel)]="item.price" /></td>
+        <td>{{item.mrp}}</td>
+        <td>{{item.tax}}</td>
+        <td>{{item.amount}}</td>
+        <td><mat-icon>delete</mat-icon></td>
+      </tr>
+      }
+    </tbody>
+  </table>
+</div>
+
+<!-- {{bill.items | json}} -->

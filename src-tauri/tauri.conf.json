@@ -13,6 +13,7 @@
     "windows": [
       {
         "title": "Green Grocer",
+        "maximized": true,
         "width": 1200,
         "height": 700
       }

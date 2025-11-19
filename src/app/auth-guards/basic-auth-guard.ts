@@ -6,7 +6,7 @@ import { LoginService } from '../login/login.service';
 @Injectable({
   providedIn: 'root'
 })
-export class HomeAuthGuard implements CanActivate {
+export class BasicAuthGuard implements CanActivate {
   router = inject(Router);
   loginSvc = inject(LoginService);
 

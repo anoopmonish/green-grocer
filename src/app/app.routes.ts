@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
 import { Login } from './login/login';
-import { Home } from './home/home';
-import { HomeAuthGuard } from './auth-guards/home-auth-guard';
+import { Biller } from './biller/biller';
+import { BasicAuthGuard } from './auth-guards/basic-auth-guard';
 
 export const routes: Routes = [
   {
@@ -9,8 +9,8 @@ export const routes: Routes = [
     component: Login
   },
   {
-    path: 'home',
-    component: Home,
-    canActivate: [HomeAuthGuard]
+    path: 'biller',
+    component: Biller,
+    canActivate: [BasicAuthGuard]
   }
 ];

@@ -16,7 +16,7 @@ export class LoginService {
     this.USER_DETAILS = new UserDetails(userId, '');
     console.log('Password entered:', password);
     this.isLoggedIn = true;
-    this.router.navigate(['/home']);
+    this.router.navigate(['/biller']);
   }
 
   initiateLogout() {

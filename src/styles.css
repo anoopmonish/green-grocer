@@ -1,16 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
 body {
+  zoom: 80%;
   margin: 10px;
+  /*background-color: '#f9faf4';*/
   font-family: Roboto, sans-serif;
 }
 
-.app-wrapper {
-  transform: scale(1); /* Reduces the size to 80% of its original */
+.scale7 {
+  transform: scale(0.7); /* Reduces the size to 80% of its original */
+  transform-origin: top left; /* Adjust origin as needed */
+}
+
+.scale8 {
+  transform: scale(0.8); /* Reduces the size to 80% of its original */
+  transform-origin: top left; /* Adjust origin as needed */
+}
+
+.scale9 {
+  transform: scale(0.9); /* Reduces the size to 80% of its original */
   transform-origin: top left; /* Adjust origin as needed */
 }
 
 .spacer {
   flex: 1 1 auto;
+}
+
+mat-form-field {
+  width: 100%;
 }
 
 a {
