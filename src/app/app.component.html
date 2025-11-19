@@ -1,16 +1,28 @@
-<div class="row header logo">
-  <span
-    ><img
-      src="/assets/logo-transparent.png"
-      width="50"
-      height="50"
-      alt="Green Grocer logo"
-  /></span>
-  <span
-    ><img src="/assets/title-transparent.png" height="50" alt="Tauri logo"
-  /></span>
-  <span class="company-name"
-    ><h1>{{ companyName }}</h1></span
-  >
-</div>
-<router-outlet />
+<mat-toolbar>
+  <img
+    class="logo"
+    src="/assets/logo-transparent.png"
+    width="50"
+    height="50"
+    alt="logo"
+  />
+  <img
+    class="logo"
+    src="/assets/title-transparent.png"
+    height="50"
+    alt="title"
+  />
+  <h1 class="company-name">{{ companyName }}</h1>
+  <span class="spacer"></span>
+  @if (loginSvc.isLoggedIn) {
+    <button
+      matIconButton
+      (click)="logout()"
+      matTooltip="Logout"
+      matTooltipPosition="before"
+    >
+      <mat-icon>logout</mat-icon>
+    </button>
+  }
+</mat-toolbar>
+<router-outlet></router-outlet>

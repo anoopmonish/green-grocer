@@ -1,21 +1,23 @@
+.login-card {
+  padding: 30px;
+  margin: auto;
+  margin-top: 100px;
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: white;
+}
+
 @keyframes rotate360 {
   0% {
     transform: none;
   }
-  25% {
-    transform: rotateX(180deg);
-  }
-  50% {
-    transform: rotate(180deg);
-  }
-  75% {
-    transform: rotateY(180deg);
-  }
   100% {
-    transform: rotate(0deg);
+    transform: rotate(360deg);
   }
 }
 
 .spinner {
-  animation: rotate360 4s ease-in-out infinite;
+  animation: rotate360 1s ease-in-out infinite;
 }

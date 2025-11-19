@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { UserDetails } from './user-details';
@@ -7,7 +7,7 @@ import { UserDetails } from './user-details';
   providedIn: 'root'
 })
 export class LoginService {
-  constructor(private router: Router) {}
+  router = inject(Router);
 
   isLoggedIn = false;
   USER_DETAILS: UserDetails | null;

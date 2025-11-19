@@ -1,4 +1,4 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, inject } from '@angular/core';
 import { AppCommonModule } from '../app-common.module';
 import { LoginService } from './login.service';
 
@@ -10,10 +10,10 @@ import { LoginService } from './login.service';
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class Login {
+  loginSvc = inject(LoginService);
+
   userId: string;
   password: string;
-
-  constructor(private loginSvc: LoginService) {}
 
   login() {
     this.loginSvc.initiateLogin(this.userId, this.password);

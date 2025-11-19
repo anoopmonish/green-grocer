@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
-import { invoke } from '@tauri-apps/api/core';
+import { Component, inject } from '@angular/core';
 import { AppCommonModule } from './app-common.module';
+import { LoginService } from './login/login.service';
 
 @Component({
   selector: 'app-root',
@@ -9,15 +9,11 @@ import { AppCommonModule } from './app-common.module';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+  loginSvc = inject(LoginService);
+
   companyName = 'SV MART';
-  greetingMessage = '';
 
-  greet(event: SubmitEvent, name: string): void {
-    event.preventDefault();
-
-    // Learn more about Tauri commands at https://tauri.app/develop/calling-rust/
-    invoke<string>('greet', { name }).then(text => {
-      this.greetingMessage = text;
-    });
+  logout() {
+    this.loginSvc.initiateLogout();
   }
 }

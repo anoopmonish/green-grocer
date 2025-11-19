@@ -2,6 +2,23 @@
 body {
   margin: 10px;
   font-family: Roboto, sans-serif;
-  transform: scale(0.9); /* Reduces the size to 80% of its original */
+}
+
+.app-wrapper {
+  transform: scale(1); /* Reduces the size to 80% of its original */
   transform-origin: top left; /* Adjust origin as needed */
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #535bf2;
 }
