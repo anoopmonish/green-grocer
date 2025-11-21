@@ -8,6 +8,7 @@ import { JsonPipe } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
@@ -20,6 +21,7 @@ const MATERIAL_MODULES = [
   MatButtonModule,
   MatCardModule,
   MatCheckboxModule,
+  MatDividerModule,
   MatIconModule,
   MatInputModule,
   MatSlideToggleModule,

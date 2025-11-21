@@ -1,10 +1,38 @@
 .table-scrollable-container {
-  max-height: 642px; /* Set a maximum height for the container */
-  overflow-y: scroll; /* Enables vertical scrolling for the container */
-  width: 100%; /* Adjust width as needed */
+  max-height: calc(100vh - 80px);
+  height: calc(100vh - 80px);
+  overflow-y: scroll;
 }
 
 .table-scrollable-container table thead th {
   position: sticky;
-  top: 0; /* Makes the header stick to the top of the container */
+  top: 0;
+}
+
+.top-fields-row {
+  margin: 15px 5px -5px 5px;
+}
+
+::ng-deep .top-fields-row .mat-mdc-text-field-wrapper {
+  font-weight: 600;
+  background-color: var(--mat-sys-secondary-container);
+}
+
+.bottom-fields-row {
+  margin: 15px 5px -5px 5px;
+}
+
+::ng-deep .bottom-fields-row .mat-mdc-text-field-wrapper {
+  font-size: 30px;
+  font-weight: bold;
+  background-color: var(--mat-sys-secondary-container);
+}
+
+.bottom-fields-row .total-amount-field {
+  color: var(--mat-sys-primary);
+}
+
+tr > th {
+  background-color: var(--mat-sys-primary);
+  color: var(--mat-sys-on-primary);
 }

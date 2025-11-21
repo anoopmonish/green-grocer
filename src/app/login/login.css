@@ -7,6 +7,7 @@
   flex-direction: column;
   gap: 15px;
   background-color: white;
+  box-shadow: 0px 4px 20px 0px #888888;
 }
 
 @keyframes rotate360 {
